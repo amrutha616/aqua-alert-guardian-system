@@ -8,6 +8,7 @@ import LeakTrends from '@/components/dashboard/LeakTrends';
 import AlertsList from '@/components/dashboard/AlertsList';
 import SystemHealth from '@/components/dashboard/SystemHealth';
 import WaterAnimation from '@/components/dashboard/WaterAnimation';
+import UsageStats from '@/components/dashboard/UsageStats';
 import { DropletIcon, AlertTriangleIcon, GaugeIcon, WifiIcon } from 'lucide-react';
 
 const Index: React.FC = () => {
@@ -54,7 +55,7 @@ const Index: React.FC = () => {
       
       <div className="grid grid-cols-3 gap-6 mb-6">
         <WaterAnimation />
-        <LeakMap />
+        <UsageStats />
         <div className="space-y-6">
           <PressureGauge 
             title="Main Line Pressure"
@@ -72,6 +73,7 @@ const Index: React.FC = () => {
       <div className="grid grid-cols-3 gap-6">
         <LeakTrends />
         <AlertsList />
+        <LeakMap />
       </div>
     </AppLayout>
   );

@@ -59,7 +59,10 @@ const SystemHealth: React.FC = () => {
                   {metric.value}{metric.unit}
                 </span>
               </div>
-              <Progress value={metric.value} className="h-2" indicatorClassName={getProgressColor(metric.value)} />
+              <Progress 
+                value={metric.value} 
+                className={`h-2 [&>div]:${getProgressColor(metric.value)}`} 
+              />
             </div>
           ))}
         </div>
